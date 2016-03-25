@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zengzw.github.io/about/index.html</loc>
+    
+    <lastmod>2016-03-25T09:56:37.148Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://zengzw.github.io/Hexo/index.html</loc>
     
     <lastmod>2016-03-25T09:47:47.377Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://zengzw.github.io/2016/03/25/Hexo/</loc>
     
     <lastmod>2016-03-25T09:45:34.025Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zengzw.github.io/about/index.html</loc>
-    
-    <lastmod>2016-03-25T09:20:58.636Z</lastmod>
     
   </url>
   
