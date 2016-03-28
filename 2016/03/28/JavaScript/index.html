@@ -41,6 +41,8 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
+  <meta name="keywords" content="JavaScript,JqueryValidate,Jquery," />
+
 
 
 
@@ -57,15 +59,16 @@
 
 
 
-<meta name="description" content="Knowledge is power">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KevinZeng的博客">
-<meta property="og:url" content="http://zengzw.github.io/index.html">
+<meta name="description" content="默认校验规则1234567891011121314151617required:true               必输字段remote:&quot;remote-valid.jsp&quot;   使用ajax方法调用remote-valid.jsp验证输入值email:true                  必须输入正确格式的电子邮件url:true                    必须输入正确格式的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQueryQ Validate">
+<meta property="og:url" content="http://zengzw.github.io/2016/03/28/JavaScript/index.html">
 <meta property="og:site_name" content="KevinZeng的博客">
-<meta property="og:description" content="Knowledge is power">
+<meta property="og:description" content="默认校验规则1234567891011121314151617required:true               必输字段remote:&quot;remote-valid.jsp&quot;   使用ajax方法调用remote-valid.jsp验证输入值email:true                  必须输入正确格式的电子邮件url:true                    必须输入正确格式的">
+<meta property="og:updated_time" content="2016-03-28T04:22:31.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KevinZeng的博客">
-<meta name="twitter:description" content="Knowledge is power">
+<meta name="twitter:title" content="JQueryQ Validate">
+<meta name="twitter:description" content="默认校验规则1234567891011121314151617required:true               必输字段remote:&quot;remote-valid.jsp&quot;   使用ajax方法调用remote-valid.jsp验证输入值email:true                  必须输入正确格式的电子邮件url:true                    必须输入正确格式的">
 
 
 
@@ -83,7 +86,7 @@
   };
 </script>
 
-  <title> KevinZeng的博客 </title>
+  <title> JQueryQ Validate | KevinZeng的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -104,9 +107,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -223,9 +224,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -245,10 +246,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/03/28/JavaScript/" itemprop="url">
-                  JQueryQ Validate
-                </a>
+                JQueryQ Validate
               
             
           </h1>
@@ -313,8 +311,7 @@
       
 
       
-        
-          <h2 id="默认校验规则"><a href="#默认校验规则" class="headerlink" title="默认校验规则"></a>默认校验规则</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">required:</span><span class="literal">true</span>               必输字段</span><br><span class="line"><span class="attr">remote:</span><span class="string">"remote-valid.jsp"</span>   使用ajax方法调用remote-valid.jsp验证输入值</span><br><span class="line"><span class="attr">email:</span><span class="literal">true</span>                  必须输入正确格式的电子邮件</span><br><span class="line"><span class="attr">url:</span><span class="literal">true</span>                    必须输入正确格式的网址</span><br><span class="line"><span class="attr">date:</span><span class="literal">true</span>                   必须输入正确格式的日期，日期校验ie6出错，慎用</span><br><span class="line"><span class="attr">dateISO:</span><span class="literal">true</span>                必须输入正确格式的日期(ISO)，例如：<span class="number">2009</span><span class="bullet">-06</span><span class="bullet">-23</span>，<span class="number">1998</span>/<span class="number">01</span>/<span class="number">22</span> 只验证格式，不验证有效性</span><br><span class="line"><span class="attr">number:</span><span class="literal">true</span>                 必须输入合法的数字(负数，小数)</span><br><span class="line"><span class="attr">digits:</span><span class="literal">true</span>                 必须输入整数</span><br><span class="line"><span class="attr">creditcard:</span><span class="literal">true</span>             必须输入合法的信用卡号</span><br><span class="line"><span class="attr">equalTo:</span><span class="string">"#password"</span>        输入值必须和<span class="comment">#password相同</span></span><br><span class="line"><span class="attr">accept:</span>                    输入拥有合法后缀名的字符串（上传文件的后缀）</span><br><span class="line"><span class="attr">maxlength:</span><span class="number">5</span>                输入长度最多是<span class="number">5</span>的字符串(汉字算一个字符)</span><br><span class="line"><span class="attr">minlength:</span><span class="number">10</span>               输入长度最小是<span class="number">10</span>的字符串(汉字算一个字符)</span><br><span class="line"><span class="attr">rangelength:</span>[<span class="number">5</span>,<span class="number">10</span>]         输入长度必须介于 <span class="number">5</span> 和 <span class="number">10</span> 之间的字符串<span class="string">")(汉字算一个字符)</span><br><span class="line">range:[5,10]               输入值必须介于 5 和 10 之间</span><br><span class="line">max:5                      输入值不能大于5</span><br><span class="line">min:10                     输入值不能小于10</span></span><br></pre></td></tr></table></figure>
+        <h2 id="默认校验规则"><a href="#默认校验规则" class="headerlink" title="默认校验规则"></a>默认校验规则</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">required:</span><span class="literal">true</span>               必输字段</span><br><span class="line"><span class="attr">remote:</span><span class="string">"remote-valid.jsp"</span>   使用ajax方法调用remote-valid.jsp验证输入值</span><br><span class="line"><span class="attr">email:</span><span class="literal">true</span>                  必须输入正确格式的电子邮件</span><br><span class="line"><span class="attr">url:</span><span class="literal">true</span>                    必须输入正确格式的网址</span><br><span class="line"><span class="attr">date:</span><span class="literal">true</span>                   必须输入正确格式的日期，日期校验ie6出错，慎用</span><br><span class="line"><span class="attr">dateISO:</span><span class="literal">true</span>                必须输入正确格式的日期(ISO)，例如：<span class="number">2009</span><span class="bullet">-06</span><span class="bullet">-23</span>，<span class="number">1998</span>/<span class="number">01</span>/<span class="number">22</span> 只验证格式，不验证有效性</span><br><span class="line"><span class="attr">number:</span><span class="literal">true</span>                 必须输入合法的数字(负数，小数)</span><br><span class="line"><span class="attr">digits:</span><span class="literal">true</span>                 必须输入整数</span><br><span class="line"><span class="attr">creditcard:</span><span class="literal">true</span>             必须输入合法的信用卡号</span><br><span class="line"><span class="attr">equalTo:</span><span class="string">"#password"</span>        输入值必须和<span class="comment">#password相同</span></span><br><span class="line"><span class="attr">accept:</span>                    输入拥有合法后缀名的字符串（上传文件的后缀）</span><br><span class="line"><span class="attr">maxlength:</span><span class="number">5</span>                输入长度最多是<span class="number">5</span>的字符串(汉字算一个字符)</span><br><span class="line"><span class="attr">minlength:</span><span class="number">10</span>               输入长度最小是<span class="number">10</span>的字符串(汉字算一个字符)</span><br><span class="line"><span class="attr">rangelength:</span>[<span class="number">5</span>,<span class="number">10</span>]         输入长度必须介于 <span class="number">5</span> 和 <span class="number">10</span> 之间的字符串<span class="string">")(汉字算一个字符)</span><br><span class="line">range:[5,10]               输入值必须介于 5 和 10 之间</span><br><span class="line">max:5                      输入值不能大于5</span><br><span class="line">min:10                     输入值不能小于10</span></span><br></pre></td></tr></table></figure>
 <h2 id="默认提示"><a href="#默认提示" class="headerlink" title="默认提示"></a>默认提示</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">messages</span>: &#123;</span><br><span class="line"><span class="attribute">required</span>: <span class="string">"This field is required."</span>,</span><br><span class="line">remote: <span class="string">"Please fix this field."</span>,</span><br><span class="line">email: <span class="string">"Please enter a valid email address."</span>,</span><br><span class="line">url: <span class="string">"Please enter a valid URL."</span>,</span><br><span class="line">date: <span class="string">"Please enter a valid date."</span>,</span><br><span class="line">dateISO: <span class="string">"Please enter a valid date (ISO)."</span>,</span><br><span class="line">dateDE: <span class="string">"Bitte geben Sie ein g眉ltiges Datum ein."</span>,</span><br><span class="line">number: <span class="string">"Please enter a valid number."</span>,</span><br><span class="line">numberDE: <span class="string">"Bitte geben Sie eine Nummer ein."</span>,</span><br><span class="line">digits: <span class="string">"Please enter only digits"</span>,</span><br><span class="line">creditcard: <span class="string">"Please enter a valid credit card number."</span>,</span><br><span class="line">equalTo: <span class="string">"Please enter the same value again."</span>,</span><br><span class="line">accept: <span class="string">"Please enter a value with a valid extension."</span>,</span><br><span class="line">maxlength: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter no more than &#123;0&#125; characters."</span>),</span><br><span class="line">minlength: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter at least &#123;0&#125; characters."</span>),</span><br><span class="line">rangelength: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter a value between &#123;0&#125; and &#123;1&#125; characters long."</span>),</span><br><span class="line">range: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter a value between &#123;0&#125; and &#123;1&#125;."</span>),</span><br><span class="line">max: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter a value less than or equal to &#123;0&#125;."</span>),</span><br><span class="line">min: $.validator.<span class="built_in">format</span>(<span class="string">"Please enter a value greater than or equal to &#123;0&#125;."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="修改默认提示"><a href="#修改默认提示" class="headerlink" title="修改默认提示"></a>修改默认提示</h3><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$.extend($.validator.messages, &#123;</span><br><span class="line"><span class="symbol">    required:</span> <span class="string">"必选字段"</span>,</span><br><span class="line"><span class="symbol">    remote:</span> <span class="string">"请修正该字段"</span>,</span><br><span class="line"><span class="symbol">    email:</span> <span class="string">"请输入正确格式的电子邮件"</span>,</span><br><span class="line"><span class="symbol">    url:</span> <span class="string">"请输入合法的网址"</span>,</span><br><span class="line"><span class="symbol">    date:</span> <span class="string">"请输入合法的日期"</span>,</span><br><span class="line"><span class="symbol">    dateISO:</span> <span class="string">"请输入合法的日期 (ISO)."</span>,</span><br><span class="line"><span class="symbol">    number:</span> <span class="string">"请输入合法的数字"</span>,</span><br><span class="line"><span class="symbol">    digits:</span> <span class="string">"只能输入整数"</span>,</span><br><span class="line"><span class="symbol">    creditcard:</span> <span class="string">"请输入合法的信用卡号"</span>,</span><br><span class="line"><span class="symbol">    equalTo:</span> <span class="string">"请再次输入相同的值"</span>,</span><br><span class="line"><span class="symbol">    accept:</span> <span class="string">"请输入拥有合法后缀名的字符串"</span>,</span><br><span class="line"><span class="symbol">    maxlength:</span> $.validator.format(<span class="string">"请输入一个长度最多是 &#123;0&#125; 的字符串"</span>),</span><br><span class="line"><span class="symbol">    minlength:</span> $.validator.format(<span class="string">"请输入一个长度最少是 &#123;0&#125; 的字符串"</span>),</span><br><span class="line"><span class="symbol">    rangelength:</span> $.validator.format(<span class="string">"请输入一个长度介于 &#123;0&#125; 和 &#123;1&#125; 之间的字符串"</span>),</span><br><span class="line"><span class="symbol">    range:</span> $.validator.format(<span class="string">"请输入一个介于 &#123;0&#125; 和 &#123;1&#125; 之间的值"</span>),</span><br><span class="line"><span class="symbol">    max:</span> $.validator.format(<span class="string">"请输入一个最大为 &#123;0&#125; 的值"</span>),</span><br><span class="line"><span class="symbol">    min:</span> $.validator.format(<span class="string">"请输入一个最小为 &#123;0&#125; 的值"</span>)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="自定义Method"><a href="#自定义Method" class="headerlink" title="自定义Method"></a>自定义Method</h2><figure class="highlight js"><figcaption><span>[手机验证方法] []</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 匹配手机号码，或者座机</span></span><br><span class="line">   jQuery.validator.addMethod(<span class="string">"isInteger"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">value, element</span>) </span>&#123;       </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.optional(element) || (<span class="regexp">/^(13|15|18)\d&#123;9&#125;$/i</span>.test(value) </span><br><span class="line">	 || <span class="regexp">/^((\(\d&#123;2,3&#125;\))|(\d&#123;3&#125;\-))?(\(0\d&#123;2,3&#125;\)|0\d&#123;2,3&#125;-)?[1-9]\d&#123;6,7&#125;(\-\d&#123;1,4&#125;)?$/i</span>.test(value));     </span><br><span class="line">   &#125;, <span class="string">"格式不正确,请使用下面格式:020-88888888或手机号码."</span>);  </span><br></pre></td></tr></table></figure>
@@ -342,527 +339,79 @@ Default: 把错误信息放在验证的元素后面
 </code></pre><h3 id="异步验证"><a href="#异步验证" class="headerlink" title="异步验证"></a>异步验证</h3><pre><code>remote：URL
 使用ajax方式进行验证，默认会提交当前验证的值到远程地址，如果需要提交其他的值，可以使用data选项    
 <figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">remote</span>: &#123;</span><br><span class="line">    <span class="attribute">url</span>: <span class="string">"check-email.php"</span>,     <span class="comment">//后台处理程序</span></span><br><span class="line">    <span class="attribute">type</span>: <span class="string">"post"</span>,               <span class="comment">//数据发送方式</span></span><br><span class="line">    <span class="attribute">dataType</span>: <span class="string">"json"</span>,           <span class="comment">//接受数据格式   </span></span><br><span class="line">    <span class="attribute">data</span>: &#123;                     <span class="comment">//要传递的数据</span></span><br><span class="line">        <span class="attribute">username</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> $(<span class="string">"#username"</span>).val();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</code></pre>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/28/JavaScript/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+</code></pre><a id="more"></a>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag">#JavaScript</a>
+          
+            <a href="/tags/JqueryValidate/" rel="tag">#JqueryValidate</a>
+          
+            <a href="/tags/Jquery/" rel="tag">#Jquery</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/03/25/Hexo/" rel="next" title="Hexo Quick Start">
+                <i class="fa fa-chevron-left"></i> Hexo Quick Start
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/25/Hexo/" itemprop="url">
-                  Hexo Quick Start
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T09:31:56+08:00" content="2016-03-25">
-              2016-03-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/25/Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/Hexo/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/25/Hexo/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/24/java/" itemprop="url">
-                  java
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-24T18:12:00+08:00" content="2016-03-24">
-              2016-03-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">-java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/24/java/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/java/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
+
+    <div class="post-spread">
       
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/23/My-New-Post/" itemprop="url">
-                  My New Post
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T13:44:37+08:00" content="2016-03-23">
-              2016-03-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Test/" itemprop="url" rel="index">
-                    <span itemprop="name">Test</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Test/测试/" itemprop="url" rel="index">
-                    <span itemprop="name">测试</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/23/My-New-Post/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/My-New-Post/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/23/hello-world/" itemprop="url">
-                  Hexo Quick Start
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T12:21:26+08:00" content="2016-03-23">
-              2016-03-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/23/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/hello-world/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/23/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -870,6 +419,14 @@ Default: 把错误信息放在验证的元素后面
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/28/JavaScript/"
+           data-title="JQueryQ Validate" data-url="http://zengzw.github.io/2016/03/28/JavaScript/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -889,8 +446,17 @@ Default: 把错误信息放在验证的元素后面
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://ww1.sinaimg.cn/crop.7.22.1192.1192.1024/5c6defebjw8epti0r9noaj20xc0y1n0x.jpg"
@@ -989,6 +555,23 @@ Default: 把错误信息放在验证的元素后面
       </section>
 
       
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#默认校验规则"><span class="nav-number">1.</span> <span class="nav-text">默认校验规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#默认提示"><span class="nav-number">2.</span> <span class="nav-text">默认提示</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改默认提示"><span class="nav-number">2.1.</span> <span class="nav-text">修改默认提示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义Method"><span class="nav-number">3.</span> <span class="nav-text">自定义Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Example"><span class="nav-number">3.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Others"><span class="nav-number">4.</span> <span class="nav-text">Others</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用其他方式替代默认的submit"><span class="nav-number">4.1.</span> <span class="nav-text">用其他方式替代默认的submit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#debug，只验证不提交表单"><span class="nav-number">4.2.</span> <span class="nav-text">debug，只验证不提交表单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ignore"><span class="nav-number">4.3.</span> <span class="nav-text">ignore</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改错误信息显示的位置"><span class="nav-number">4.4.</span> <span class="nav-text">更改错误信息显示的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#验证的触发方式修改"><span class="nav-number">4.5.</span> <span class="nav-text">验证的触发方式修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步验证"><span class="nav-number">4.6.</span> <span class="nav-text">异步验证</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
 
     </div>
   </aside>
@@ -1072,6 +655,167 @@ Default: 把错误信息放在验证的元素后面
   
 
   
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.4.5.2"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   
 
