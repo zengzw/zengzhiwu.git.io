@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="spring,Spring MVC," />
 
 
 
@@ -59,19 +59,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="A Spring MVC web application, noticed all the Spring’s beans are loaded twice!?
+123456789101112package com.mkyong.config.db;@Configurationpublicclass MongoDevConfig &amp;#123;private final static Logger l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Quick Start">
-<meta property="og:url" content="http://zengzw.github.io/2016/03/23/hello-world/index.html">
+<meta property="og:title" content="Spring MVC – Beans loaded twice">
+<meta property="og:url" content="http://zengzw.github.io/2016/04/14/spring-load-twice/index.html">
 <meta property="og:site_name" content="KevinZeng的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-03-25T06:49:58.841Z">
+<meta property="og:description" content="A Spring MVC web application, noticed all the Spring’s beans are loaded twice!?
+123456789101112package com.mkyong.config.db;@Configurationpublicclass MongoDevConfig &amp;#123;private final static Logger l">
+<meta property="og:updated_time" content="2016-04-14T10:13:48.965Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Quick Start">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Spring MVC – Beans loaded twice">
+<meta name="twitter:description" content="A Spring MVC web application, noticed all the Spring’s beans are loaded twice!?
+123456789101112package com.mkyong.config.db;@Configurationpublicclass MongoDevConfig &amp;#123;private final static Logger l">
 
 
 
@@ -89,7 +89,7 @@ Quick">
   };
 </script>
 
-  <title> Hexo Quick Start | KevinZeng的博客 </title>
+  <title> Spring MVC – Beans loaded twice | KevinZeng的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +249,7 @@ Quick">
             
             
               
-                Hexo Quick Start
+                Spring MVC – Beans loaded twice
               
             
           </h1>
@@ -261,8 +261,8 @@ Quick">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-23T12:21:26+08:00" content="2016-03-23">
-              2016-03-23
+            <time itemprop="dateCreated" datetime="2016-04-14T17:48:25+08:00" content="2016-04-14">
+              2016-04-14
             </time>
           </span>
 
@@ -275,8 +275,8 @@ Quick">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/spring/" itemprop="url" rel="index">
+                    <span itemprop="name">spring</span>
                   </a>
                 </span>
 
@@ -291,8 +291,8 @@ Quick">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/03/23/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/23/hello-world/" itemprop="commentsCount"></span>
+                <a href="/2016/04/14/spring-load-twice/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/spring-load-twice/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -314,15 +314,17 @@ Quick">
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a><br><a id="more"></a></p>
+        <p>A Spring MVC web application, noticed all the Spring’s beans are loaded twice!?</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mkyong.config.db;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line">publicclass MongoDevConfig &#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(MongoDevConfig.class);</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function">MongoDbFactory <span class="title">mongoDbFactory</span><span class="params">()</span><span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">//...returnnew new SimpleMongoDbFactory(mongo,"db");;</span></span><br><span class="line">		logger.debug(<span class="string">"Init...... MongoDbFactory() in production mode!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>During Application startup :</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2015<span class="selector-tag">-03-0517</span><span class="selector-pseudo">:52</span><span class="selector-pseudo">:32</span> <span class="selector-tag">DEBUG</span> <span class="selector-tag">c</span><span class="selector-class">.m</span><span class="selector-class">.config</span><span class="selector-class">.MongoLiveConfig-</span> <span class="selector-tag">Init</span>...... <span class="selector-tag">MongoDbFactory</span>()<span class="selector-tag">in</span> <span class="selector-tag">production</span> <span class="selector-tag">mode</span>!</span><br><span class="line">2015<span class="selector-tag">-03-0517</span><span class="selector-pseudo">:52</span><span class="selector-pseudo">:32</span> <span class="selector-tag">DEBUG</span> <span class="selector-tag">c</span><span class="selector-class">.m</span><span class="selector-class">.config</span><span class="selector-class">.MongoLiveConfig</span> <span class="selector-tag">-</span> <span class="selector-tag">Init</span>...... <span class="selector-tag">MongoDbFactory</span>()<span class="selector-tag">in</span> <span class="selector-tag">production</span> <span class="selector-tag">mode</span>!</span><br></pre></td></tr></table></figure>
+<h3 id="1-Spring-Configuration"><a href="#1-Spring-Configuration" class="headerlink" title="1. Spring Configuration"></a>1. Spring Configuration</h3><p>Here is the Spring MVC configuration.<br><figure class="highlight xml"><figcaption><span>web.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>mvc-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>mvc-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">listener-class</span>&gt;</span></span><br><span class="line">			org.springframework.web.context.ContextLoaderListener</span><br><span class="line">	<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-value</span>&gt;</span>/WEB-INF/mvc-dispatcher-servlet.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight xml"><figcaption><span>mvc-dispatcher-servlet.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans...</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.springmvc"</span>/&gt;</span><span class="tag">&lt;<span class="name">mvc:annotation-driven</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+ <a id="more"></a>
+<h3 id="2-Solution"><a href="#2-Solution" class="headerlink" title="2. Solution"></a>2. Solution</h3><p><strong> Read this Spring DispatcherServlet reference to understand how Spring pick up the XML file :<br>Upon initialization of a DispatcherServlet, Spring MVC looks for a file named [servlet-name]-servlet.xml in the WEB-INF directory of your web application and … </strong></p>
+<p>In Above Spring configuration :<br>The servlet mvc-dispatcher will load mvc-dispatcher-servlet.xml<br>And the listener ContextLoaderListener will loadsmvc-dispatcher-servlet.xml again<br>To fix it, just renamed the servlet name mvc-dispatcher to something else.</p>
+<figure class="highlight xml"><figcaption><span>web.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span><span class="comment">&lt;!-- Now it will find hello-dispatcher-servlet.xml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>hello-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">	org.springframework.web.servlet.DispatcherServlet</span><br><span class="line">	<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>hello-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>In short, make sure Spring will not pick up the Spring XML configuration twice.</p>
 
       
     </div>
@@ -337,7 +339,9 @@ Quick">
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag">#hexo</a>
+            <a href="/tags/spring/" rel="tag">#spring</a>
+          
+            <a href="/tags/Spring-MVC/" rel="tag">#Spring MVC</a>
           
         </div>
       
@@ -346,13 +350,13 @@ Quick">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/29/quartz-cronExpression/" rel="next" title="quartz-cronExpression">
+                <i class="fa fa-chevron-left"></i> quartz-cronExpression
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/23/My-New-Post/" rel="prev" title="My New Post">
-                My New Post <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -401,8 +405,8 @@ Quick">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/03/23/hello-world/"
-           data-title="Hexo Quick Start" data-url="http://zengzw.github.io/2016/03/23/hello-world/">
+      <div class="ds-thread" data-thread-key="2016/04/14/spring-load-twice/"
+           data-title="Spring MVC – Beans loaded twice" data-url="http://zengzw.github.io/2016/04/14/spring-load-twice/">
       </div>
     
   </div>
@@ -544,7 +548,7 @@ Quick">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Spring-Configuration"><span class="nav-number">1.</span> <span class="nav-text">1. Spring Configuration</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Solution"><span class="nav-number">2.</span> <span class="nav-text">2. Solution</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

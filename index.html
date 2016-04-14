@@ -246,6 +246,128 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/14/spring-load-twice/" itemprop="url">
+                  Spring MVC – Beans loaded twice
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-14T17:48:25+08:00" content="2016-04-14">
+              2016-04-14
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/spring/" itemprop="url" rel="index">
+                    <span itemprop="name">spring</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/14/spring-load-twice/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/14/spring-load-twice/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>A Spring MVC web application, noticed all the Spring’s beans are loaded twice!?</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.mkyong.config.db;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line">publicclass MongoDevConfig &#123;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> Logger logger = LoggerFactory.getLogger(MongoDevConfig.class);</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Bean</span></span><br><span class="line">	<span class="function">MongoDbFactory <span class="title">mongoDbFactory</span><span class="params">()</span><span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">		<span class="comment">//...returnnew new SimpleMongoDbFactory(mongo,"db");;</span></span><br><span class="line">		logger.debug(<span class="string">"Init...... MongoDbFactory() in production mode!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>During Application startup :</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2015<span class="selector-tag">-03-0517</span><span class="selector-pseudo">:52</span><span class="selector-pseudo">:32</span> <span class="selector-tag">DEBUG</span> <span class="selector-tag">c</span><span class="selector-class">.m</span><span class="selector-class">.config</span><span class="selector-class">.MongoLiveConfig-</span> <span class="selector-tag">Init</span>...... <span class="selector-tag">MongoDbFactory</span>()<span class="selector-tag">in</span> <span class="selector-tag">production</span> <span class="selector-tag">mode</span>!</span><br><span class="line">2015<span class="selector-tag">-03-0517</span><span class="selector-pseudo">:52</span><span class="selector-pseudo">:32</span> <span class="selector-tag">DEBUG</span> <span class="selector-tag">c</span><span class="selector-class">.m</span><span class="selector-class">.config</span><span class="selector-class">.MongoLiveConfig</span> <span class="selector-tag">-</span> <span class="selector-tag">Init</span>...... <span class="selector-tag">MongoDbFactory</span>()<span class="selector-tag">in</span> <span class="selector-tag">production</span> <span class="selector-tag">mode</span>!</span><br></pre></td></tr></table></figure>
+<h3 id="1-Spring-Configuration"><a href="#1-Spring-Configuration" class="headerlink" title="1. Spring Configuration"></a>1. Spring Configuration</h3><p>Here is the Spring MVC configuration.<br><figure class="highlight xml"><figcaption><span>web.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">web-app</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>mvc-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>mvc-dispatcher<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">listener-class</span>&gt;</span></span><br><span class="line">			org.springframework.web.context.ContextLoaderListener</span><br><span class="line">	<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">param-value</span>&gt;</span>/WEB-INF/mvc-dispatcher-servlet.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">web-app</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight xml"><figcaption><span>mvc-dispatcher-servlet.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">beans...</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">"com.springmvc"</span>/&gt;</span><span class="tag">&lt;<span class="name">mvc:annotation-driven</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/14/spring-load-twice/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/29/quartz-cronExpression/" itemprop="url">
                   quartz-cronExpression
                 </a>
@@ -992,7 +1114,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1000,7 +1122,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1009,7 +1131,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
